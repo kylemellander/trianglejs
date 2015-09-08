@@ -7,10 +7,20 @@ $(document).ready(function(){
     var c = parseInt($('input#side_c').val());
     var triangle = triangleTracker(a, b, c)
 
-    var results = 'A triangle with the side lengths of ' + a + ', ' + b + ', and ' + c + ' is a ' + triangle + '.';
+    var triangleResult;
+    if (triangle === false) {
+      triangleResult = "not a"
+    } else if (triangle === "scalene") {
+      triangleResult = "a scalene"
+    } else {
+      triangleResult = "an " + triangle
+    };
+
+    var results = 'A triangle with the side lengths of ' + a + ', ' + b + ', and ' + c + ' is ' + triangleResult + ' triangle.';
 
     $("#result").show();
-    $("#result").text(results)
+    $("#result").empty();
+    $("#result").append(results);
     event.preventDefault();
   });
 
