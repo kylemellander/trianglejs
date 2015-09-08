@@ -2,25 +2,26 @@
 <html>
   <head>
     <title>Triangle Tracker</title>
-    <script href="/js/scripts.js"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <form>
       <label for="side_a">Side A</label>
-      <input type="text" name="side_a">
+      <input type="text" id="side_a">
 
       <label for="side_b">Side B</label>
-      <input type="text" name="side_b">
+      <input type="text" id="side_b">
 
       <label for="side_c">Side C</label>
-      <input type="text" name="side_c">
+      <input type="text" id="side_c">
 
       <button type="submit">Submit</button>
     </form>
 
     <div id="result">
-      <p>A triangle with the side lengths of <span class="side_a"></span>, <span class="side_b"></span>, and <span class="side_c"></span> is a <span class="triangle"></span>.</p>
     </div>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/script-jquery.js"></script>
 </html>
